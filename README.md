@@ -37,11 +37,3 @@ To run the tests for the custom operators and hooks, use the following command:
 ```bash
 python -m unittest discover -s tests
 ```
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or features.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
