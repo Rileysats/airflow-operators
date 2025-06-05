@@ -1,0 +1,16 @@
+[pyproject.toml]
+[tool.poetry]
+name = "my-airflow-operators"
+version = "0.1.0"
+description = "A project for custom Airflow operators"
+authors = ["Your Name <youremail@example.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+apache-airflow = "^2.0"
+# Add other dependencies here
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
