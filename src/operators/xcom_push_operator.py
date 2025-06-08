@@ -1,4 +1,5 @@
 from airflow.models import BaseOperator
+from airflow.utils.context import Context
 from typing import Any, Dict
 
 class XComPushOperator(BaseOperator):
@@ -19,7 +20,7 @@ class XComPushOperator(BaseOperator):
         super().__init__(*args, **kwargs)
         self.xcom_values = xcom_values
 
-    def execute(self, context):
+    def execute(self, context: Context) -> Any:
         for key, value in self.xcom_values.items():
             context['ti'].xcom_push(key=key, value=value)
         self.log.info(f'Pushed XCom values: {self.xcom_values}')
